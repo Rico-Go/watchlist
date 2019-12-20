@@ -4,11 +4,6 @@ app = Flask(__name__)
 
 
 @app.route('/')
-def hello_world():
-    return '<h1>Hello Rico!</h1><image src="http://wx4.sinaimg.cn/mw690/006HJgYYgy1fsnwktpl2fg305k05k49y.gif">'
-
-
-@app.route('/page/')
 def user_page():
     return render_template('index.html', name=name, movies=movies)
 
