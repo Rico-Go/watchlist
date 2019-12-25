@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="809b33a5-e385-4071-bb25-f18e667bee1a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/alter.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/edit.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,8 +67,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Flask Main" />
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -162,7 +163,7 @@
       <updated>1576744777988</updated>
       <workItem from="1576744814096" duration="22772000" />
       <workItem from="1577176583109" duration="565000" />
-      <workItem from="1577178553130" duration="7471000" />
+      <workItem from="1577178553130" duration="15844000" />
     </task>
     <servers />
   </component>
@@ -190,22 +191,22 @@
       <screen x="0" y="23" width="1440" height="797" />
     </state>
     <state x="100" y="100" width="1240" height="700" key="DiffContextDialog/0.23.1440.797@0.23.1440.797" timestamp="1577097839737" />
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1577241220342">
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1577263108502">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1577241220342" />
-    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1577241220340">
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1577263108502" />
+    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1577263108499">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1577241220340" />
-    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1577241220339">
+    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1577263108499" />
+    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1577263108497">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1577241220339" />
-    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1577241220341">
+    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1577263108497" />
+    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1577263108500">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1577241220341" />
+    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1577263108500" />
     <state width="234" height="457" key="HiddenNamespacesPopup" timestamp="1577152863301">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, redirect, flash, request, url_for
 from flask_sqlalchemy import SQLAlchemy
 import os
 import sys
@@ -17,12 +17,70 @@ app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = prefix + os.path.join(app.root_path, 'data.db')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
-
+# 设置签名所需的密钥
+app.config['SECRET_KEY'] = 'dev'
 
 @app.route('/')
 def user_page():
     movies = Movies.query.all()
     return render_template('index.html', movies=movies)
+
+
+@app.route('/movies/edit', methods=['GET', 'POST'])
+def edit_page():
+    """
+    添加信息
+    """
+    if request.method == 'POST':
+        title = request.form.get('title')
+        chinese = request.form.get('chinese')
+        image_url = request.form.get('image_url')
+        if not title or not chinese:
+            flash('Invalid input.')
+            return redirect(url_for('edit_page'))  # 重定向回主页面
+        # 保存表单数据到数据库
+        movie_new = Movies(title=title, chinese=chinese, image_url=image_url)
+        db.session.add(movie_new)
+        db.session.commit()
+        flash('Item created.')
+        return redirect(url_for('edit_page'))
+    movies = Movies.query.all()
+    return render_template('edit.html', movies=movies)
+
+
+@app.route('/movies/edit/alter/<int:movie_id>', methods=['POST', 'GET'])
+def alter_page(movie_id):
+    """
+    修改信息
+    """
+    movie = Movies.query.get_or_404(movie_id)
+    if request.method == 'POST':
+        title = request.form['title']
+        chinese = request.form['chinese']
+        image_url = request.form['image_url']
+        if not title or not chinese:
+            flash('Invalid input.')
+            return redirect(url_for('alter_page', movie_id=movie_id))  # 重定向回编辑页面
+        # 保存表单数据到数据库
+        movie.title = title
+        movie.chinese = chinese
+        movie.image_url = image_url
+        db.session.commit()
+        flash('Item updated.')
+        return redirect(url_for('edit_page'))
+    return render_template('alter.html', movie=movie)
+
+
+@app.route('/movies/edit/delete/<int:movie_id>', methods=['POST', 'GET'])
+def delete(movie_id):
+    """
+    删除信息
+    """
+    movie = Movies.query.get_or_404(movie_id)
+    db.session.delete(movie)
+    db.session.commit()
+    flash('Item delete')
+    return redirect(url_for('edit_page'))
 
 
 @app.errorhandler(404)  # 传入要处理的错误代码
