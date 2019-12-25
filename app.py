@@ -21,9 +21,21 @@ db = SQLAlchemy(app)
 
 @app.route('/')
 def user_page():
-    user = User.query.first()
     movies = Movies.query.all()
-    return render_template('index.html', name=user.name, movies=movies)
+    return render_template('index.html', movies=movies)
+
+
+@app.errorhandler(404)  # 传入要处理的错误代码
+def page_not_found(e):
+    return render_template('404.html'), 404
+
+
+# 由于404页面和index页面中都需要传入user变量，进行优化
+@app.context_processor
+def inject_user():
+    user = User.query.first()
+    return dict(user=user)
+
 
 
 class User(db.Model):

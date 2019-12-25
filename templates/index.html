@@ -1,21 +1,17 @@
-<!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
-<head>
-    <meta charset="UTF-8">
-    <title>{{ name }}'s Watchlist</title>
-    <link rel="icon" href="{{ url_for('static', filename='favicon.jpg') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
-<body>
-    <img class='avatar' alt="Avatar" src="{{ url_for('static', filename='favicon.jpg') }}">
-    <h2>{{ name }}'s Watchlist</h2>
-    <h4>{{ movies|length }} Titles</h4>
+{% extends 'base.html' %}
+{% block content %}
+    <p>{{ movies|length }} Titles</p>
     <ul class="movie-list">
         {% for movie in movies %}
-            <li>{{ movie.title|capitalize }} - {{ movie.chinese }}
-                <br><img src={{ movie.image_url }} height="250" width="200">
-            </li>
+        <li style="font-weight: bolder">{{ movie.title }} - {{ movie.chinese }}
+            <span class="float-right">
+                <a class="yyes yyesst" style="padding: 5px" href="http://www.yyetss.com/Search/index/?s_keys={{ movie.title }}" target="_blank" title="Find this movie on yyetss">YYeTss</a>
+            </span>
+            <a href="http://www.yyetss.com/Search/index/?s_keys={{ movie.title }}">
+                <br><img src="{{ movie.image_url }}" height="250" width="200" >
+            </a>
+
+        </li>
         {% endfor %}
     </ul>
-</body>
-</html>
+{% endblock %}
