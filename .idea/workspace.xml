@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="809b33a5-e385-4071-bb25-f18e667bee1a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/alter.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/settings.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/edit.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,20 +40,6 @@
         <item name="data" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="data" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
-        <item name="movies: table" type="3d80ac25:SqliteImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="data" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
-        <item name="user: table" type="3d80ac25:SqliteImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -163,7 +149,8 @@
       <updated>1576744777988</updated>
       <workItem from="1576744814096" duration="22772000" />
       <workItem from="1577176583109" duration="565000" />
-      <workItem from="1577178553130" duration="15844000" />
+      <workItem from="1577178553130" duration="17748000" />
+      <workItem from="1577340770116" duration="7720000" />
     </task>
     <servers />
   </component>
@@ -191,22 +178,22 @@
       <screen x="0" y="23" width="1440" height="797" />
     </state>
     <state x="100" y="100" width="1240" height="700" key="DiffContextDialog/0.23.1440.797@0.23.1440.797" timestamp="1577097839737" />
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1577263108502">
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1577336215609">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1577263108502" />
-    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1577263108499">
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1577336215609" />
+    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1577336215608">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1577263108499" />
-    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1577263108497">
+    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1577336215608" />
+    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1577336215608">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1577263108497" />
-    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1577263108500">
+    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1577336215608" />
+    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1577336215609">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1577263108500" />
+    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1577336215609" />
     <state width="234" height="457" key="HiddenNamespacesPopup" timestamp="1577152863301">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -216,10 +203,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="229" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1576745123775" />
-    <state x="399" y="261" key="com.intellij.ide.util.TipDialog" timestamp="1577178554778">
+    <state x="399" y="254" key="com.intellij.ide.util.TipDialog" timestamp="1577340980359">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="399" y="261" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1577178554778" />
+    <state x="399" y="254" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1577340980359" />
     <state x="399" y="254" key="com.intellij.ide.util.TipDialog/0.23.1440.797@0.23.1440.797" timestamp="1576744823203" />
     <state x="248" y="55" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1577152972626">
       <screen x="0" y="0" width="1440" height="900" />
